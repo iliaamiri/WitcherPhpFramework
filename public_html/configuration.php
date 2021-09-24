@@ -1,10 +1,15 @@
 <?php
+define('PROJECT_CODE','Witcher Framework');
+
+define('DIR_ROOT',"C:/xampp/htdocs/LATEST/");
+
+define('MAIN_SERVER_DOMAIN', "witcher.ow");
 
 // HTTP
-define('HTTP_SERVER',"http://witcher.ow");
+define('HTTP_SERVER',"http://" . MAIN_SERVER_DOMAIN . "/");
 
 // HTTPS
-define('HTTPS_SERVER',"http://witcher.ow");
+define('HTTPS_SERVER',"https://" . MAIN_SERVER_DOMAIN . "/");
 
 // CDNS
 define('MAIN_CDN',"http://witcher.ow");
@@ -24,17 +29,14 @@ foreach($requiredExtensions as $requiredExtension) {
     }
 }
 
-define('PROJECT_CODE','witcher.ow');
-
-define('WITCHER_VERSION','3.0');
+define('WITCHER_VERSION','2.0');
 
 // DIR
-define('DIR_CORE',"C:/xampp/htdocs/LATEST/witcher/core/");
-define('DIR_MODELS',"C:/xampp/htdocs/LATEST/witcher/app/model/");
-define('DIR_APPLICATION',"C:/xampp/htdocs/LATEST/witcher/app/");
-define('DIR_ROOT',"C:/xampp/htdocs/LATEST/");
-define('DIR_PUBLIC',"C:/xampp/htdocs/LATEST/public_html/");
-define('DIR_LOADER',"C:/xampp/htdocs/LATEST/witcher/app/autoloader.php");
+define('DIR_CORE', DIR_ROOT . "witcher/core/");
+define('DIR_MODELS', DIR_ROOT . "witcher/app/model/");
+define('DIR_APPLICATION', DIR_ROOT . "witcher/app/");
+define('DIR_PUBLIC', DIR_ROOT . "public_html/");
+define('DIR_LOADER', DIR_ROOT . "witcher/app/autoloader.php");
 if (file_exists(DIR_ROOT) and file_exists(DIR_LOADER) and file_exists(DIR_MODELS) and file_exists(DIR_APPLICATION) and file_exists(DIR_CORE)) {
     require_once(DIR_LOADER);
     $witcher = new witcher();
