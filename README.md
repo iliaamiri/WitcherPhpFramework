@@ -3,3 +3,6 @@
 
 - It uses the MVC software architecture (Model, View, Controller).<br>
 - It is compatible with PHP 7.0 or higher.<br>
+
+  
+  ## I stopped this framework development. (RIP)
